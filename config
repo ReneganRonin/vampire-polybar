@@ -206,7 +206,7 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #00ffa2
 label =  %percentage:2%%
 
 [module/memory]
@@ -365,7 +365,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp>  <label>
-format-underline = #f50a4d
+format-underline = #ffaa00
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
