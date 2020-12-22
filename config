@@ -19,12 +19,12 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #00000000
-background-alt = #ffffff
+background-alt = #7214ff
 ;foreground = ${xrdb:color7:#222}
-foreground = #ff0000
-foreground-alt = #555
+foreground = #efff6f
+foreground-alt = #fa00ff
 primary = #e60053
-secondary = #ffffff
+secondary = #2aff00
 alert = #ccc200
 
 [bar/example]
@@ -33,15 +33,14 @@ width = 100%
 height = 30
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
+tray-offset-x = ${self.radius}
 fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 1
-line-color = #c95cff
-
+bottom = true
 ;border-size = 10
 ;border-color = #b51fff
 padding-left = 1
@@ -49,7 +48,7 @@ padding-right = 1
 module-margin-left = 2
 module-margin-right = 0
 
-font-0 = FantasqueSansMono\ Nerd\ Font:pixelsize=10;5
+font-0 = CaskaydiaCove\ Nerd\ Font:pixelsize=9;2
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
@@ -58,11 +57,10 @@ modules-center = xwindow
 modules-right = filesystem xkeyboard memory cpu wlan eth temperature date
 
 tray-position = right
-tray-detatched = true
-tray-padding = 10
-tray-offset-x = -2
-tray-offset-y = 4
-;tray-background = #0063ff
+tray-detatched = false 
+tray-padding = 2
+tray-offset-y = 0
+; tray-background = #0000ff
 ;wm-restack = bspwm
 ;wm-restack = i3
 
@@ -222,7 +220,7 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected =  <ramp-signal>  <label-connected>
+format-connected =  <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
 
@@ -364,7 +362,7 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp>  <label>
+format = <ramp> <label>
 format-underline = #ffaa00
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
@@ -374,7 +372,7 @@ label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
-ramp-1 = "  "
+ramp-1 = ""
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
